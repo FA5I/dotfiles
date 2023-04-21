@@ -1,0 +1,1 @@
+- usage: `stow --target=${HOME}/.config/nvim nvim`
