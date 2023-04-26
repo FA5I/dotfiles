@@ -69,5 +69,8 @@ vim.g.gruvbox_material_cursor = 'blue'
 vim.cmd "colorscheme gruvbox-material"
 
 -- Latex related
-vim.g.text_flavor='latex'
-vim.g.text_conceal='abdmg'
+vim.g.tex_flavor = "latex"
+vim.g.tex_conceal = "abdmgs"
+vim.g.vimtex_view_method = "skim"
+vim.g.vimtex_view_skim_sync = 1
+vim.g.vimtex_view_skim_activate = 1

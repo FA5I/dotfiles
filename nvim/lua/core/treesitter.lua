@@ -7,7 +7,7 @@ configs.setup({
         "rust", "toml"
     }, -- one of "all" or a list of languages
 
-    auto_install = true,
+    auto_install = false,
 
     highlight = {
         enable = true -- false will disable the whole extension
@@ -16,6 +16,8 @@ configs.setup({
     autopairs = {enable = true},
 
     indent = {enable = true, disable = {"python", "css"}},
+
+    disable = {"latex"},
 
     context_commentstring = {enable = true}
 
