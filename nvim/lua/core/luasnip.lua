@@ -1,9 +1,7 @@
 local ls = require('luasnip')
 
 ls.config.set_config({ -- Setting LuaSnip config
-    history=true,
     enable_autosnippets = true,
-    store_selection_keys = "<Tab>"
 })
 
 vim.cmd [[

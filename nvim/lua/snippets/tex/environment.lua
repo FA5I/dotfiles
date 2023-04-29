@@ -20,17 +20,12 @@ local tex_utils = require('snippets.tex.tex_utils')
 return {
 
   -- enter inline math mode
-  s({trig = "mk", wordTrig = true, snippetType="autosnippet"},
-    {
-      t("$"),
-      i(1),
-      t("$"),
-      f(tex_utils.adjust_space, {}),
-      d(2),
-    }
+  s({trig = "mk", snippetType="autosnippet"},
+    fmta(
+      [[ $ <> $ <> ]],
+      { i(1), i(0), }
+    )
   ),
-
-
 
   -- displayed math mode
   s({trig="dm", snippetType="autosnippet"},
@@ -50,10 +45,10 @@ return {
     fmta(
       [[
         \begin{<>}
-            <>
+           <> 
         \end{<>}
       ]],
-      { i(1), i(2), r(1) }
+      { i(1), i(0), r(1) }
     )
   ),
 }

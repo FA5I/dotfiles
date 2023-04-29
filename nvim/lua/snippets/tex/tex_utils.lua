@@ -31,13 +31,12 @@ tex_utils.in_tikz = function()  -- TikZ picture environment detection
 end
 
 
-tex_utils.adjust_space = function(_, snip)
-  local node_val = snip.env[2]
-  if node_val and not node_val:match('^[%s%p]$') then
-    return ' '
-  else
-    return ''
-  end
+tex_utils.adjust_space = function(values)
+    local node_val = values[1][1]
+    if node_val == "," or node_val == '.' or node_val == "?" or node_val == "-" or node_val == " " then
+      return ""
+    end
+    return " "
 end
 
 

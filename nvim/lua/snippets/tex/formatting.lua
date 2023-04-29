@@ -24,7 +24,8 @@ return {
     {
       trig = "tt",
       dscr = "Insert '\\texttt{}'",
-      name = "Monospace"
+      name = "Monospace",
+      snippetType = "autosnippet",
     },
     fmta("\\texttt{<>}", { i(1) } )
   ),
