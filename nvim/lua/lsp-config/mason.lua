@@ -1,4 +1,4 @@
-local servers = {"lua_ls", "pyright", "jsonls", "rust_analyzer", "tsserver"}
+local servers = {"lua_ls", "pyright", "jsonls", "rust_analyzer", "tsserver", "yamlls"}
 
 local settings = {
     ui = {

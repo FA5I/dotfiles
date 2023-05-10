@@ -29,5 +29,35 @@ return {
     },
     fmta("\\texttt{<>}", { i(1) } )
   ),
+
+   s(
+    {
+      trig = "bf",
+      dscr = "Insert '\\textbf{}'",
+      name = "Monospace",
+      snippetType = "autosnippet",
+    },
+    fmta("\\textbf{<>}", { i(1) } )
+  ),
+
+  s(
+    {
+      trig = "itemize",
+      dscr = "Insert itemized list",
+      name = "Monospace",
+      snippetType = "autosnippet",
+    },
+    fmta(
+      [[
+        \begin{itemize}
+          \item <>
+        \end{itemize}
+      ]],
+      { i(1) } )
+  ),
+
+
+
+
 }
 
