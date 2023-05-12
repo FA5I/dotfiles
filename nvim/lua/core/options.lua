@@ -62,11 +62,12 @@ vim.cmd "filetype plugin on"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.g.gruvbox_material_background = 'medium'
-vim.g.gruvbox_material_better_performance = 1
-vim.g.gruvbox_material_visual = 'blue background'
-vim.g.gruvbox_material_cursor = 'blue'
-vim.cmd "colorscheme gruvbox-material"
+-- vim.g.gruvbox_material_background = 'medium'
+-- vim.g.gruvbox_material_better_performance = 1
+-- vim.g.gruvbox_material_visual = 'blue background'
+-- vim.g.gruvbox_material_cursor = 'blue'
+-- vim.cmd "colorscheme gruvbox-material"
+vim.cmd.colorscheme "catppuccin"
 
 -- Latex related
 vim.g.tex_flavor = "latex"
