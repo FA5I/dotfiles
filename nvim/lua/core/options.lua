@@ -9,7 +9,6 @@ local options = {
     ignorecase = true, -- ignore case in search patterns
     mouse = "a", -- allow the mouse to be used in neovim
     pumheight = 10, -- pop up menu height
-    --[[ showmode = false,                        -- we don't need to see things like -- INSERT -- anymore ]]
     showtabline = 2, -- always show tabs
     smartcase = true, -- smart case
     smartindent = true, -- make indenting smarter again
@@ -41,7 +40,6 @@ local options = {
     -- colorcolumn='+1',
 
     ttyfast = true, -- speed up scrolling
-    -- wildmode='longest,list',                 -- get bash-like tab completions
 
     showcmd = true,
     background = "light"
@@ -49,32 +47,6 @@ local options = {
 }
 
 for k, v in pairs(options) do vim.opt[k] = v end
-
--- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
-vim.opt.shortmess:append "c" -- don't give |ins-completion-menu| messages
-vim.opt.iskeyword:append "-" -- hyphenated words recognized by searches
-vim.opt.formatoptions:remove({"c", "r", "o"}) -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
-vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- separate vim plugins from neovim in case vim still in use
-
-vim.cmd "filetype plugin on"
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- Latex related
-vim.g.tex_flavor = "latex"
-vim.g.tex_conceal = "abdmgs"
-vim.g.vimtex_view_method = "skim"
-vim.g.vimtex_view_skim_sync = 1
-vim.g.vimtex_view_skim_activate = 1
-
-vim.cmd('command! -nargs=0 Q Bdelete!')
-
--- vim.g.gruvbox_material_background = 'medium'
--- vim.g.gruvbox_material_better_performance = 1
--- vim.g.gruvbox_material_visual = 'blue background'
--- vim.g.gruvbox_material_cursor = 'blue'
--- vim.cmd "colorscheme gruvbox-material"
 
 require("catppuccin").setup({
     integrations = {
@@ -97,6 +69,5 @@ require("catppuccin").setup({
         markdown = true
     }
 })
-
 
 vim.cmd.colorscheme "catppuccin"
