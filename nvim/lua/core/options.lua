@@ -44,8 +44,7 @@ local options = {
     -- wildmode='longest,list',                 -- get bash-like tab completions
 
     showcmd = true,
-    background = "light",
-
+    background = "light"
 
 }
 
@@ -62,13 +61,6 @@ vim.cmd "filetype plugin on"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- vim.g.gruvbox_material_background = 'medium'
--- vim.g.gruvbox_material_better_performance = 1
--- vim.g.gruvbox_material_visual = 'blue background'
--- vim.g.gruvbox_material_cursor = 'blue'
--- vim.cmd "colorscheme gruvbox-material"
-vim.cmd.colorscheme "catppuccin"
-
 -- Latex related
 vim.g.tex_flavor = "latex"
 vim.g.tex_conceal = "abdmgs"
@@ -77,3 +69,41 @@ vim.g.vimtex_view_skim_sync = 1
 vim.g.vimtex_view_skim_activate = 1
 
 vim.cmd('command! -nargs=0 Q Bdelete!')
+
+-- vim.g.gruvbox_material_background = 'medium'
+-- vim.g.gruvbox_material_better_performance = 1
+-- vim.g.gruvbox_material_visual = 'blue background'
+-- vim.g.gruvbox_material_cursor = 'blue'
+-- vim.cmd "colorscheme gruvbox-material"
+
+require("catppuccin").setup({
+  custom_highlights = function(colors)
+        return {
+            Comment = { fg = colors.flamingo },
+            ["@constant.builtin"] = { fg = colors.peach, style = {} },
+            ["@comment"] = { fg = colors.surface2, style = { "italic" } },
+        }
+    end,
+    integrations = {
+        native_lsp = {
+            enabled = true,
+            virtual_text = {
+                errors = {"italic"},
+                hints = {"italic"},
+                warnings = {"italic"},
+                information = {"italic"}
+            },
+            underlines = {
+                errors = {"undercurl"},
+                hints = {"undercurl"},
+                warnings = {"undercurl"},
+                information = {"undercurl"}
+            }
+        },
+        hop = true,
+        markdown = true
+    }
+})
+
+
+vim.cmd.colorscheme "catppuccin"

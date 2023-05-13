@@ -68,6 +68,7 @@ return packer.startup(function(use)
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
+    
     use {"JoosepAlviste/nvim-ts-context-commentstring"}
 
     use {
@@ -90,8 +91,6 @@ return packer.startup(function(use)
         "folke/noice.nvim",
         requires = {
             "MunifTanjim/nui.nvim"
-            -- "rcarriga/nvim-notify" --   `nvim-notify` is only needed, if you want to use the notification view. If not available, we use `mini` as the fallback
-
         }
     })
 
@@ -117,7 +116,7 @@ return packer.startup(function(use)
     use {'simrat39/rust-tools.nvim'}
     use {"folke/neodev.nvim"}
 
-    use {"RRethy/vim-illuminate"} -- automatically highlighting other uses of the word under the cursor 
+    use {"RRethy/vim-illuminate" } -- automatically highlighting other uses of the word under the cursor 
 
     -- git
     use {"tpope/vim-fugitive"}
@@ -160,7 +159,18 @@ return packer.startup(function(use)
     }
 
     use 'lervag/vimtex'
-    -- use 'SirVer/ultisnips'
+  
+    use {
+      "folke/trouble.nvim",
+      requires = "nvim-tree/nvim-web-devicons",
+      config = function()
+        require("trouble").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then require("packer").sync() end
