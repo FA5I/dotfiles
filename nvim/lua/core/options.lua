@@ -77,13 +77,6 @@ vim.cmd('command! -nargs=0 Q Bdelete!')
 -- vim.cmd "colorscheme gruvbox-material"
 
 require("catppuccin").setup({
-  custom_highlights = function(colors)
-        return {
-            Comment = { fg = colors.flamingo },
-            ["@constant.builtin"] = { fg = colors.peach, style = {} },
-            ["@comment"] = { fg = colors.surface2, style = { "italic" } },
-        }
-    end,
     integrations = {
         native_lsp = {
             enabled = true,
