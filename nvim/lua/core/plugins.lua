@@ -71,6 +71,15 @@ return packer.startup(function(use)
     
     use {"JoosepAlviste/nvim-ts-context-commentstring"}
 
+
+    -- editing
+    use {'reedes/vim-pencil', opt = true, cmd = {'Pencil'}}
+
+
+    -- snippets
+    use({ "L3MON4D3/LuaSnip" })
+
+
     use {
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
