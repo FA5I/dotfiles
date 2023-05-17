@@ -48,6 +48,27 @@ local options = {
 
 for k, v in pairs(options) do vim.opt[k] = v end
 
+
+-- Latex related
+vim.g.tex_flavor = "latex"
+vim.g.tex_conceal = "abdmgs"
+vim.g.vimtex_view_method = "skim"
+vim.g.vimtex_view_skim_sync = 1
+vim.g.vimtex_view_skim_activate = 1
+
+
+vim.cmd('command! -nargs=0 Q Bdelete!')
+
+
+
+
+
+
+
+
+
+
+
 require("catppuccin").setup({
     integrations = {
         native_lsp = {

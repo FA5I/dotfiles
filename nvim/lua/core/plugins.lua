@@ -80,6 +80,18 @@ return packer.startup(function(use)
     use({ "L3MON4D3/LuaSnip" })
 
 
+    -- latex
+    use 'lervag/vimtex'
+
+    use {"hrsh7th/nvim-cmp"} -- completion plugin; sources are installed from external repos and then sourced
+    use {"hrsh7th/cmp-nvim-lsp"} -- completion engine source for built in neovim lsp server
+    use {"hrsh7th/cmp-buffer"}
+    use {"hrsh7th/cmp-path"}
+    use {"hrsh7th/cmp-cmdline"}
+    use {"hrsh7th/cmp-nvim-lsp-signature-help"}
+    use { 'saadparwaiz1/cmp_luasnip' }
+
+
     use {
       "folke/trouble.nvim",
       requires = "nvim-tree/nvim-web-devicons",
